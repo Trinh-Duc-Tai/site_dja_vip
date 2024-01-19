@@ -1,0 +1,2 @@
+s = "YyqBaabYty6kSNlsZvpMSunt0eW8xFvWIRVH9V9OHe0LsKQEiPcnGJXFCMDu2XTzp1D3rogzfwdZ81K3LAqP4f5TmxR2IEUd757A"
+print(len(s))

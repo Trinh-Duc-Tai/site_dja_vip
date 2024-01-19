@@ -1,0 +1,6 @@
+# Trong views.py
+
+
+
+
+

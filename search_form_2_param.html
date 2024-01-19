@@ -1,0 +1,51 @@
+{% load i18n static %}
+{% if cl.search_fields %}
+<div id="toolbar">
+
+<form id="changelist-search" method="get" role="search">
+    <div><!-- DIV needed for valid HTML -->
+        <label for="phone_searchbar"><img src="{% static "admin/img/search.svg" %}" alt="Search"></label>
+        <input type="text" size="20" name="phone__icontains" value="{{ request.GET.phone__icontains }}" id="phone_searchbar" placeholder="Search by phone">
+
+        <input type="text" size="20" name="status__icontains" value="{{ request.GET.status__icontains }}" id="status_searchbar" placeholder="Search by status">
+        <!-- <input type="text" size="20" name="status__icontains" value="{{ cl.query }}" id="status_searchbar" placeholder="Search by status"> -->
+
+        <input type="submit" value="{% translate 'Search' %}" class="search-button">
+        <input type="button" value="Đặt lại" class="clear-results-button" onclick="clearSearchResults()" style="color:white">
+    </div>
+
+<!-- ---------het custom code ----------  -->
+{% if cl.search_help_text %}
+<br class="clear">
+<div class="help" id="searchbar_helptext">{{ cl.search_help_text }}</div>
+{% endif %}
+</form></div>
+<script>
+    function getParameterValue(parameterName) {
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        return urlSearchParams.get(parameterName);
+    }
+
+    // Lấy giá trị của tham số từ URL
+    var originalPhoneValue = getParameterValue('phone__icontains');
+    var originalStatusValue = getParameterValue('status__icontains');
+    // Gọi hàm restoreSearchValues khi trang load
+    restoreSearchValues();
+
+    function restoreSearchValues() {
+        // Set giá trị từ biến original
+        document.getElementById('phone_searchbar').value = originalPhoneValue;
+        document.getElementById('status_searchbar').value = originalStatusValue;
+
+        // Thay đổi placeholder bằng giá trị đang search
+        // document.getElementById('phone_searchbar').placeholder = "Search by phone: " + originalPhoneValue;
+        // document.getElementById('status_searchbar').placeholder = "Search by status: " + originalStatusValue;
+    }
+    function clearSearchResults() {
+        // Đặt giá trị trống cho ô tìm kiếm và gửi form
+        document.getElementById('phone_searchbar').value = '';
+        document.getElementById('status_searchbar').value = '';
+        document.getElementById('changelist-search').submit();
+    }
+</script>
+{% endif %}

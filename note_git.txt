@@ -1,0 +1,7 @@
+echo "# site_dja_vip" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Trinh-Duc-Tai/site_dja_vip.git
+git push -u origin main
