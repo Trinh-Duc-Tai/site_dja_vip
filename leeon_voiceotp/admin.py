@@ -242,7 +242,7 @@ admin.site.register(OtpCallPartner, OtpCallPartnerAdmin)
 
 class OtpCallVendorAdmin(BaseAdminWithHiddenButtons,NoDeletePermissionAdmin,NoAddPermissionAdmin):
     # list_display = ['id', 'phone', 'sms', 'requestid', 'partnerid', 'ip', 'typeof', 'vendorid', 'price', 'status', 'vendorreponsecode', 'vendorreponseid', 'vendorreponsedesc', 'partnerotpprice', 'formatted_created_at']
-    list_display = [ 'id','phone', 'sms', 'requestid', 'partnerid', 'ip', 'typeof', 'price', 'status', 'vendorreponseid', 'vendorreponsedesc', 'formatted_created_at']
+    list_display = [ 'id','phone', 'sms', 'requestid', 'partner_account_name', 'ip', 'typeof', 'price', 'status', 'vendorreponseid', 'vendorreponsedesc', 'formatted_created_at']
     list_per_page = 23
     list_filter = (
         ('createdtime',DateRangeFilterBuilder(title=_('Lọc theo thời gian'))),
@@ -254,6 +254,13 @@ class OtpCallVendorAdmin(BaseAdminWithHiddenButtons,NoDeletePermissionAdmin,NoAd
         return formatted_datetime
     formatted_created_at.short_description = _('Created_Time')
     formatted_created_at.admin_order_field = 'createdtime'
+    def partner_account_name(self, obj):
+        if obj.partnerid:
+            partner = OtpPartner.objects.get(pk=obj.partnerid)
+            return partner.accountname
+        return None
+    partner_account_name.short_description = _('Khách hàng')
+    partner_account_name.admin_order_field = "partnerid"
     def get_queryset(self, request):
         queryset = OtpCallVendor202312.objects.all()
         if OtpCallVendor202401.objects.exists():

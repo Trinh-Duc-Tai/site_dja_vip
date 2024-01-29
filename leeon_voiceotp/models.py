@@ -2,12 +2,12 @@ from django.db import models
 
 
 class OptTopup(models.Model):
-    id = models.AutoField(db_column='Id', primary_key=True)  # Field name made lowercase.
-    partnerid = models.IntegerField(db_column='PartnerId', blank=True, null=True)  # Field name made lowercase.
-    topup = models.CharField(db_column='Topup', max_length=20, blank=True, null=True)  # Field name made lowercase.
-    currentbalance = models.CharField(db_column='CurrentBalance', max_length=10, blank=True, null=True)  # Field name made lowercase.
-    createdtime = models.DateTimeField(db_column='CreatedTime', blank=True, null=True)  # Field name made lowercase.
-    updatedtime = models.DateTimeField(db_column='UpdatedTime', blank=True, null=True)  # Field name made lowercase.
+    id = models.AutoField(db_column='Id', primary_key=True)  
+    partnerid = models.IntegerField(db_column='PartnerId', blank=True, null=True)  
+    topup = models.CharField(db_column='Topup', max_length=20, blank=True, null=True)  
+    currentbalance = models.CharField(db_column='CurrentBalance', max_length=10, blank=True, null=True)  
+    createdtime = models.DateTimeField(db_column='CreatedTime', blank=True, null=True)  
+    updatedtime = models.DateTimeField(db_column='UpdatedTime', blank=True, null=True)  
 
     class Meta:
         managed = False
@@ -16,21 +16,21 @@ class OptTopup(models.Model):
 
 
 class OtpCallPartner202312(models.Model):
-    id = models.AutoField(db_column='Id', primary_key=True)  # Field name made lowercase.
-    phone = models.CharField(db_column='Phone', max_length=15, blank=True, null=True)  # Field name made lowercase.
-    sms = models.CharField(db_column='Sms', max_length=10, blank=True, null=True)  # Field name made lowercase.
-    responseid = models.CharField(db_column='ResponseId', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    createdtime = models.DateTimeField(db_column='CreatedTime')  # Field name made lowercase.
-    result = models.CharField(db_column='Result', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    status = models.CharField(db_column='Status', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    hangupcausecode = models.IntegerField(db_column='HangupCauseCode', blank=True, null=True)  # Field name made lowercase.
-    hangupcausedesc = models.CharField(db_column='HangupCauseDesc', max_length=100, blank=True, null=True)  # Field name made lowercase.
-    billsec = models.IntegerField(db_column='BillSec', blank=True, null=True)  # Field name made lowercase.
-    duration = models.IntegerField(db_column='Duration', blank=True, null=True)  # Field name made lowercase.
-    answersec = models.IntegerField(db_column='AnswerSec', blank=True, null=True)  # Field name made lowercase.
-    partnerid = models.IntegerField(db_column='PartnerId', blank=True, null=True)  # Field name made lowercase.
-    partnerresponsecode = models.CharField(db_column='PartnerResponseCode', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    partnerresponsedesc = models.CharField(db_column='PartnerResponseDesc', max_length=20, blank=True, null=True)  # Field name made lowercase.
+    id = models.AutoField(db_column='Id', primary_key=True)  
+    phone = models.CharField(db_column='Phone', max_length=15, blank=True, null=True)  
+    sms = models.CharField(db_column='Sms', max_length=10, blank=True, null=True)  
+    responseid = models.CharField(db_column='ResponseId', max_length=50, blank=True, null=True)  
+    createdtime = models.DateTimeField(db_column='CreatedTime')  
+    result = models.CharField(db_column='Result', max_length=50, blank=True, null=True)  
+    status = models.CharField(db_column='Status', max_length=50, blank=True, null=True)  
+    hangupcausecode = models.IntegerField(db_column='HangupCauseCode', blank=True, null=True)  
+    hangupcausedesc = models.CharField(db_column='HangupCauseDesc', max_length=100, blank=True, null=True)  
+    billsec = models.IntegerField(db_column='BillSec', blank=True, null=True) 
+    duration = models.IntegerField(db_column='Duration', blank=True, null=True)  
+    answersec = models.IntegerField(db_column='AnswerSec', blank=True, null=True)  
+    partnerid = models.IntegerField(db_column='PartnerId', blank=True, null=True)  
+    partnerresponsecode = models.CharField(db_column='PartnerResponseCode', max_length=50, blank=True, null=True)  
+    partnerresponsedesc = models.CharField(db_column='PartnerResponseDesc', max_length=20, blank=True, null=True)  
 
     class Meta:
         managed = False
@@ -39,21 +39,21 @@ class OtpCallPartner202312(models.Model):
 
 
 class OtpCallPartner202401(models.Model):
-    id = models.AutoField(db_column='Id', primary_key=True)  # Field name made lowercase.
-    phone = models.CharField(db_column='Phone', max_length=15, blank=True, null=True)  # Field name made lowercase.
-    sms = models.CharField(db_column='Sms', max_length=10, blank=True, null=True)  # Field name made lowercase.
-    responseid = models.CharField(db_column='ResponseId', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    createdtime = models.DateTimeField(db_column='CreatedTime')  # Field name made lowercase.
-    result = models.CharField(db_column='Result', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    status = models.CharField(db_column='Status', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    hangupcausecode = models.IntegerField(db_column='HangupCauseCode', blank=True, null=True)  # Field name made lowercase.
-    hangupcausedesc = models.CharField(db_column='HangupCauseDesc', max_length=100, blank=True, null=True)  # Field name made lowercase.
-    billsec = models.IntegerField(db_column='BillSec', blank=True, null=True)  # Field name made lowercase.
-    duration = models.IntegerField(db_column='Duration', blank=True, null=True)  # Field name made lowercase.
-    answersec = models.IntegerField(db_column='AnswerSec', blank=True, null=True)  # Field name made lowercase.
-    partnerid = models.IntegerField(db_column='PartnerId', blank=True, null=True)  # Field name made lowercase.
-    partnerresponsecode = models.CharField(db_column='PartnerResponseCode', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    partnerresponsedesc = models.CharField(db_column='PartnerResponseDesc', max_length=20, blank=True, null=True)  # Field name made lowercase.
+    id = models.AutoField(db_column='Id', primary_key=True) 
+    phone = models.CharField(db_column='Phone', max_length=15, blank=True, null=True)  
+    sms = models.CharField(db_column='Sms', max_length=10, blank=True, null=True)  
+    responseid = models.CharField(db_column='ResponseId', max_length=50, blank=True, null=True)  
+    createdtime = models.DateTimeField(db_column='CreatedTime')  
+    result = models.CharField(db_column='Result', max_length=50, blank=True, null=True)  
+    status = models.CharField(db_column='Status', max_length=50, blank=True, null=True) 
+    hangupcausecode = models.IntegerField(db_column='HangupCauseCode', blank=True, null=True)  
+    hangupcausedesc = models.CharField(db_column='HangupCauseDesc', max_length=100, blank=True, null=True)  
+    billsec = models.IntegerField(db_column='BillSec', blank=True, null=True)  
+    duration = models.IntegerField(db_column='Duration', blank=True, null=True)  
+    answersec = models.IntegerField(db_column='AnswerSec', blank=True, null=True)  
+    partnerid = models.IntegerField(db_column='PartnerId', blank=True, null=True)  
+    partnerresponsecode = models.CharField(db_column='PartnerResponseCode', max_length=50, blank=True, null=True)  
+    partnerresponsedesc = models.CharField(db_column='PartnerResponseDesc', max_length=20, blank=True, null=True)  
 
     class Meta:
         managed = False
@@ -62,21 +62,21 @@ class OtpCallPartner202401(models.Model):
 
 
 class OtpCallVendor202312(models.Model):
-    id = models.AutoField(db_column='Id', primary_key=True)  # Field name made lowercase.
-    phone = models.CharField(db_column='Phone', max_length=15, blank=True, null=True)  # Field name made lowercase.
-    sms = models.CharField(db_column='Sms', max_length=10, blank=True, null=True)  # Field name made lowercase.
-    requestid = models.CharField(db_column='RequestId', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    partnerid = models.IntegerField(db_column='PartnerId', blank=True, null=True)  # Field name made lowercase.
-    ip = models.CharField(db_column='Ip', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    typeof = models.IntegerField(db_column='Typeof', blank=True, null=True)  # Field name made lowercase.
-    vendorid = models.IntegerField(db_column='VendorId', blank=True, null=True)  # Field name made lowercase.
-    price = models.CharField(db_column='Price', max_length=10, blank=True, null=True)  # Field name made lowercase.
-    status = models.IntegerField(db_column='Status', blank=True, null=True)  # Field name made lowercase.
-    vendorreponsecode = models.IntegerField(db_column='VendorReponseCode', blank=True, null=True)  # Field name made lowercase.
-    vendorreponseid = models.CharField(db_column='VendorReponseId', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    vendorreponsedesc = models.CharField(db_column='VendorReponseDesc', max_length=200, blank=True, null=True)  # Field name made lowercase.
-    partnerotpprice = models.CharField(db_column='PartnerOtpPrice', max_length=10, blank=True, null=True)  # Field name made lowercase.
-    createdtime = models.DateTimeField(db_column='CreatedTime')  # Field name made lowercase.
+    id = models.AutoField(db_column='Id', primary_key=True)  
+    phone = models.CharField(db_column='Phone', max_length=15, blank=True, null=True)  
+    sms = models.CharField(db_column='Sms', max_length=10, blank=True, null=True)  
+    requestid = models.CharField(db_column='RequestId', max_length=50, blank=True, null=True)  
+    partnerid = models.IntegerField(db_column='PartnerId', blank=True, null=True)  
+    ip = models.CharField(db_column='Ip', max_length=50, blank=True, null=True)  
+    typeof = models.IntegerField(db_column='Typeof', blank=True, null=True)  
+    vendorid = models.IntegerField(db_column='VendorId', blank=True, null=True)  
+    price = models.CharField(db_column='Price', max_length=10, blank=True, null=True)  
+    status = models.IntegerField(db_column='Status', blank=True, null=True)  
+    vendorreponsecode = models.IntegerField(db_column='VendorReponseCode', blank=True, null=True)  
+    vendorreponseid = models.CharField(db_column='VendorReponseId', max_length=50, blank=True, null=True) 
+    vendorreponsedesc = models.CharField(db_column='VendorReponseDesc', max_length=200, blank=True, null=True)  
+    partnerotpprice = models.CharField(db_column='PartnerOtpPrice', max_length=10, blank=True, null=True)  
+    createdtime = models.DateTimeField(db_column='CreatedTime') 
 
     class Meta:
         managed = False
@@ -85,21 +85,21 @@ class OtpCallVendor202312(models.Model):
 
 
 class OtpCallVendor202401(models.Model):
-    id = models.AutoField(db_column='Id', primary_key=True)  # Field name made lowercase.
-    phone = models.CharField(db_column='Phone', max_length=15, blank=True, null=True)  # Field name made lowercase.
-    sms = models.CharField(db_column='Sms', max_length=10, blank=True, null=True)  # Field name made lowercase.
-    requestid = models.CharField(db_column='RequestId', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    partnerid = models.IntegerField(db_column='PartnerId', blank=True, null=True)  # Field name made lowercase.
-    ip = models.CharField(db_column='Ip', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    typeof = models.IntegerField(db_column='Typeof', blank=True, null=True)  # Field name made lowercase.
-    vendorid = models.IntegerField(db_column='VendorId', blank=True, null=True)  # Field name made lowercase.
-    price = models.CharField(db_column='Price', max_length=10, blank=True, null=True)  # Field name made lowercase.
-    status = models.IntegerField(db_column='Status', blank=True, null=True)  # Field name made lowercase.
-    vendorreponsecode = models.IntegerField(db_column='VendorReponseCode', blank=True, null=True)  # Field name made lowercase.
-    vendorreponseid = models.CharField(db_column='VendorReponseId', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    vendorreponsedesc = models.CharField(db_column='VendorReponseDesc', max_length=200, blank=True, null=True)  # Field name made lowercase.
-    partnerotpprice = models.CharField(db_column='PartnerOtpPrice', max_length=10, blank=True, null=True)  # Field name made lowercase.
-    createdtime = models.DateTimeField(db_column='CreatedTime')  # Field name made lowercase.
+    id = models.AutoField(db_column='Id', primary_key=True)  
+    phone = models.CharField(db_column='Phone', max_length=15, blank=True, null=True)  
+    sms = models.CharField(db_column='Sms', max_length=10, blank=True, null=True)  
+    requestid = models.CharField(db_column='RequestId', max_length=50, blank=True, null=True)  
+    partnerid = models.IntegerField(db_column='PartnerId', blank=True, null=True)  
+    ip = models.CharField(db_column='Ip', max_length=50, blank=True, null=True)  
+    typeof = models.IntegerField(db_column='Typeof', blank=True, null=True)  
+    vendorid = models.IntegerField(db_column='VendorId', blank=True, null=True)  
+    price = models.CharField(db_column='Price', max_length=10, blank=True, null=True)  
+    status = models.IntegerField(db_column='Status', blank=True, null=True)  
+    vendorreponsecode = models.IntegerField(db_column='VendorReponseCode', blank=True, null=True)  
+    vendorreponseid = models.CharField(db_column='VendorReponseId', max_length=50, blank=True, null=True)  
+    vendorreponsedesc = models.CharField(db_column='VendorReponseDesc', max_length=200, blank=True, null=True) 
+    partnerotpprice = models.CharField(db_column='PartnerOtpPrice', max_length=10, blank=True, null=True)  
+    createdtime = models.DateTimeField(db_column='CreatedTime') 
 
     class Meta:
         managed = False
@@ -108,11 +108,11 @@ class OtpCallVendor202401(models.Model):
 
 
 class OtpPartner(models.Model):
-    id = models.AutoField(db_column='Id', primary_key=True)  # Field name made lowercase.
-    accountname = models.CharField(db_column='AccountName', max_length=200, db_collation='utf8mb3_unicode_ci', blank=True, null=True, verbose_name="Khách hàng")  # Field name made lowercase.
-    sourcenumber = models.IntegerField(db_column='SourceNumber', blank=True, null=True)  # Field name made lowercase.
-    ip = models.CharField(db_column='Ip', max_length=200, db_collation='utf8mb3_unicode_ci', blank=True, null=True)  # Field name made lowercase.
-    ssecretkey = models.CharField(db_column='SsecretKey', max_length=200, db_collation='latin1_swedish_ci', blank=True, null=True, verbose_name="Token")  # Field name made lowercase.
+    id = models.AutoField(db_column='Id', primary_key=True)  
+    accountname = models.CharField(db_column='AccountName', max_length=200, db_collation='utf8mb3_unicode_ci', blank=True, null=True, verbose_name="Khách hàng")  
+    sourcenumber = models.IntegerField(db_column='SourceNumber', blank=True, null=True)  
+    ip = models.CharField(db_column='Ip', max_length=200, db_collation='utf8mb3_unicode_ci', blank=True, null=True)  
+    ssecretkey = models.CharField(db_column='SsecretKey', max_length=200, db_collation='latin1_swedish_ci', blank=True, null=True, verbose_name="Token")  
     STATUS_CHOICES = [
         # (0, '0'),
         # (1, '1'),
@@ -123,16 +123,16 @@ class OtpPartner(models.Model):
     def default_status_value():
         default_status = OtpPartner.objects.get(pk=1).status
         return default_status
-    status = models.IntegerField(db_column='Status', default=0,blank=True, null=True, verbose_name="Trạng thái",choices=STATUS_CHOICES)  # Field name made lowercase.
-    # status = models.IntegerField(db_column='Status', default=0,blank=True, null=True, verbose_name="Trạng thái")  # Field name made lowercase.
-    linkcallback = models.CharField(db_column='LinkCallBack', max_length=200, blank=True, null=True,verbose_name="Link Callback")  # Field name made lowercase.
-    linkbody = models.TextField(db_column='LinkBody', blank=True, null=True,verbose_name="Body")  # Field name made lowercase.
-    vendorid = models.IntegerField(db_column='VendorId', blank=True, null=True)  # Field name made lowercase.
-    limitbalance = models.CharField(db_column='LimitBalance', max_length=20, blank=True, null=True,verbose_name="Hạn mức")  # Field name made lowercase.
-    price = models.CharField(db_column='Price', max_length=10, blank=True, null=True,verbose_name="Giá")  # Field name made lowercase.
-    currentbalance = models.CharField(db_column='CurrentBalance', max_length=20, blank=True, null=True,verbose_name="Hạn mức sử dụng")  # Field name made lowercase.
-    todayconsumption = models.CharField(db_column='TodayConsumption', max_length=20, blank=True, null=True)  # Field name made lowercase.
-    typemoney = models.IntegerField(db_column='TypeMoney', blank=True, null=True)  # Field name made lowercase.
+    status = models.IntegerField(db_column='Status', default=0,blank=True, null=True, verbose_name="Trạng thái",choices=STATUS_CHOICES)  
+    # status = models.IntegerField(db_column='Status', default=0,blank=True, null=True, verbose_name="Trạng thái")  
+    linkcallback = models.CharField(db_column='LinkCallBack', max_length=200, blank=True, null=True,verbose_name="Link Callback")  
+    linkbody = models.TextField(db_column='LinkBody', blank=True, null=True,verbose_name="Body")  
+    vendorid = models.IntegerField(db_column='VendorId', blank=True, null=True)  
+    limitbalance = models.CharField(db_column='LimitBalance', max_length=20, blank=True, null=True,verbose_name="Hạn mức")  
+    price = models.CharField(db_column='Price', max_length=10, blank=True, null=True,verbose_name="Giá")  
+    currentbalance = models.CharField(db_column='CurrentBalance', max_length=20, blank=True, null=True,verbose_name="Hạn mức sử dụng")  
+    todayconsumption = models.CharField(db_column='TodayConsumption', max_length=20, blank=True, null=True)  
+    typemoney = models.IntegerField(db_column='TypeMoney', blank=True, null=True)  
     class Meta:
         managed = False
         db_table = 'otp_partner'
@@ -146,11 +146,11 @@ def generateToken():
     return ''.join(random.choice(charset) for _ in range(length))
 
 class OtpVendor(models.Model):
-    id = models.AutoField(db_column='Id', primary_key=True)  # Field name made lowercase.
-    accountname = models.CharField(db_column='AccountName', max_length=200, db_collation='utf8mb3_unicode_ci', blank=True, null=True, verbose_name="Nhà cung cấp")  # Field name made lowercase.
-    linkapi = models.CharField(db_column='LinkApi', max_length=200, db_collation='utf8mb3_unicode_ci', blank=True, null=True, verbose_name="Link API")  # Field name made lowercase.
-    linkbody = models.TextField(db_column='LinkBody', db_collation='utf8mb3_unicode_ci', blank=True, null=True, verbose_name="Body")  # Field name made lowercase.
-    linktoken = models.CharField(db_column='LinkToken', max_length=200, blank=True, null=True, verbose_name="Token")  # Field name made lowercase.
+    id = models.AutoField(db_column='Id', primary_key=True)  
+    accountname = models.CharField(db_column='AccountName', max_length=200, db_collation='utf8mb3_unicode_ci', blank=True, null=True, verbose_name="Nhà cung cấp")  
+    linkapi = models.CharField(db_column='LinkApi', max_length=200, db_collation='utf8mb3_unicode_ci', blank=True, null=True, verbose_name="Link API")  
+    linkbody = models.TextField(db_column='LinkBody', db_collation='utf8mb3_unicode_ci', blank=True, null=True, verbose_name="Body")  
+    linktoken = models.CharField(db_column='LinkToken', max_length=200, blank=True, null=True, verbose_name="Token")  
 
     def save(self, *args, **kwargs):
         # Sinh token nếu trường linktoken không có giá trị
